@@ -11,6 +11,7 @@ public class StrokePoint extends Stroke {
 	public StrokePoint(float x, float y) {
 		this.x = x;
 		this.y = y;
+		this.pressure = 0;
 	}
 	
 	public StrokePoint(float x, float y, float pressure) {
@@ -21,7 +22,11 @@ public class StrokePoint extends Stroke {
 	
 	@Override
 	public void draw(Canvas canvas, Paint paint) {
-		canvas.drawPoint(x, y, paint);
+		if(pressure < .5) {
+			canvas.drawPoint(x, y, paint);
+		} else {
+			canvas.drawRect(x - pressure * 2.5f, y - pressure * 2.5f, x - pressure * 2.5f, y + pressure * 2.5f, paint);
+		}
 		canvas.drawText((x + ", " + y + ", " + pressure), x, y, paint);
 	}
 
