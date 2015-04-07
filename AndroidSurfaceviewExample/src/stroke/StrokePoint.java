@@ -1,5 +1,7 @@
 package stroke;
 
+import java.util.UUID;
+
 import android.graphics.Canvas;
 import android.graphics.Paint;
 

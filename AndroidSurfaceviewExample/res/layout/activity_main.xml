@@ -23,6 +23,15 @@
 	        android:layout_height="100dp"
 	        android:contentDescription="Draw Shape"
 	        android:src="@drawable/shapes" />"
+	    <TextView 
+	        android:id="@+id/recognized1"
+	        android:layout_width="100dp"
+	        android:layout_height="100dp"
+	        android:text="0" />
+	    <Button
+	        android:layout_width="100dp"
+	        android:layout_height="100dp"
+	        android:onClick="recognize"/>
     </LinearLayout>
     
     <com.javacodegeeks.androidsurfaceviewexample.StudentAnswerView

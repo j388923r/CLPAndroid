@@ -63,7 +63,7 @@ public class StudentAnswerView extends SurfaceView implements SurfaceHolder.Call
 	public boolean onTouch(View v, MotionEvent event) {
 		// TODO Auto-generated method stub
 		++xLoc;
-		Log.d("Action", String.format("%d",event.getAction())); //0 - down, 1 - up, 2 - move
+		Log.d("Action", String.format("%d",event.getEventTime())); //0 - down, 1 - up, 2 - move
 		StrokePoint point = new StrokePoint(event.getX(), event.getY(), event.getPressure());
 		if(event.getAction() == 0) {
 			currentPath = new StrokePath();

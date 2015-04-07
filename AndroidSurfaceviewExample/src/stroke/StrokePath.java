@@ -1,6 +1,7 @@
 package stroke;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -10,6 +11,7 @@ public class StrokePath extends Stroke {
 	ArrayList<StrokePoint> points;
 	
 	public StrokePath() {
+		super.id = UUID.randomUUID();
 		points = new ArrayList<StrokePoint>();
 	}
 	
